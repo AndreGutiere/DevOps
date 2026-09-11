@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,19 +19,20 @@
 
     <main>
 
+        <!-- Cadastro de chamado -->
         <section class="novo-chamado">
 
             <h2>Novo chamado</h2>
 
-            <input 
-                type="text" 
-                id="titulo" 
+            <input
+                type="text"
+                id="titulo"
                 placeholder="Título do chamado"
             >
 
-            <input 
-                type="text" 
-                id="setor" 
+            <input
+                type="text"
+                id="setor"
                 placeholder="Setor"
             >
 
@@ -47,6 +49,48 @@
         </section>
 
 
+        <!-- Contadores -->
+        <section class="contadores">
+
+            <div>
+                <strong id="totalChamados">0</strong>
+                <span>Total</span>
+            </div>
+
+            <div>
+                <strong id="chamadosAbertos">0</strong>
+                <span>Abertos</span>
+            </div>
+
+            <div>
+                <strong id="chamadosConcluidos">0</strong>
+                <span>Concluídos</span>
+            </div>
+
+        </section>
+
+
+        <!-- Filtros -->
+        <section class="filtros">
+
+            <h2>Filtrar chamados</h2>
+
+            <button onclick="filtrarChamados('Todos')">
+                Todos
+            </button>
+
+            <button onclick="filtrarChamados('Aberto')">
+                Abertos
+            </button>
+
+            <button onclick="filtrarChamados('Concluído')">
+                Concluídos
+            </button>
+
+        </section>
+
+
+        <!-- Lista -->
         <section class="lista">
 
             <h2>Chamados</h2>
@@ -57,7 +101,9 @@
 
     </main>
 
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
