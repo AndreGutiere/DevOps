@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chamados TI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Chamados de TI</h1>
+        <p>Controle simples de chamados</p>
+    </header>
+
+    <main>
+
+        <section class="informacoes">
+            <h2>Informações</h2>
+
+            <p>
+                Sistema de controle de chamados do setor de TI.
+            </p>
+
+            <p>
+                Utilize o formulário abaixo para registrar um novo chamado.
+            </p>
+
+            <hr>
+
+            <h3>Prioridades</h3>
+
+            <ul>
+                <li>Baixa - Problemas sem urgência</li>
+                <li>Média - Problemas que precisam de atenção</li>
+                <li>Alta - Problemas que precisam de atendimento rápido</li>
+            </ul>
+        </section>
+
+        <section class="como-usar">
+
+            <h2>Como utilizar</h2>
+
+            <ol>
+                <li>Preencha o título do chamado.</li>
+                <li>Informe o setor responsável.</li>
+                <li>Selecione a prioridade.</li>
+                <li>Clique em "Criar chamado".</li>
+                <li>Após resolver o problema, clique em "Concluir".</li>
+            </ol>
+
+        </section>
+
+        <!-- Cadastro de chamado -->
+        <section class="novo-chamado">
+
+            <h2>Novo chamado</h2>
+
+            <input
+                type="text"
+                id="titulo"
+                placeholder="Título do chamado"
+            >
+
+            <input
+                type="text"
+                id="setor"
+                placeholder="Setor"
+            >
+
+            <select id="prioridade">
+                <option value="Baixa">Baixa</option>
+                <option value="Média">Média</option>
+                <option value="Alta">Alta</option>
+            </select>
+
+            <button onclick="criarChamado()">
+                Criar chamado
+            </button>
+
+        </section>
+
+
+        <!-- Contadores -->
+        <section class="contadores">
+
+            <div>
+                <strong id="totalChamados">0</strong>
+                <span>Total</span>
+            </div>
+
+            <div>
+                <strong id="chamadosAbertos">0</strong>
+                <span>Abertos</span>
+            </div>
+
+            <div>
+                <strong id="chamadosConcluidos">0</strong>
+                <span>Concluídos</span>
+            </div>
+
+        </section>
+
+
+        <!-- Filtros -->
+        <section class="filtros">
+
+            <h2>Filtrar chamados</h2>
+
+            <button onclick="filtrarChamados('Todos')">
+                Todos
+            </button>
+
+            <button onclick="filtrarChamados('Aberto')">
+                Abertos
+            </button>
+
+            <button onclick="filtrarChamados('Concluído')">
+                Concluídos
+            </button>
+
+        </section>
+
+
+        <!-- Lista -->
+        <section class="lista">
+
+            <h2>Chamados</h2>
+
+            <div id="listaChamados"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>Chamados TI - Sistema de Controle de Chamados</p>
+
+        <p>Versão 1.0.0</p>
+
+        <p>Responsável: André</p>
+
+        <p>&copy; 2026 - Todos os direitos reservados</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
