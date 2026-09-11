@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chamados TI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Chamados de TI</h1>
+        <p>Controle simples de chamados</p>
+    </header>
+
+    <main>
+
+        <section class="novo-chamado">
+
+            <h2>Novo chamado</h2>
+
+            <input 
+                type="text" 
+                id="titulo" 
+                placeholder="Título do chamado"
+            >
+
+            <input 
+                type="text" 
+                id="setor" 
+                placeholder="Setor"
+            >
+
+            <select id="prioridade">
+                <option value="Baixa">Baixa</option>
+                <option value="Média">Média</option>
+                <option value="Alta">Alta</option>
+            </select>
+
+            <button onclick="criarChamado()">
+                Criar chamado
+            </button>
+
+        </section>
+
+
+        <section class="lista">
+
+            <h2>Chamados</h2>
+
+            <div id="listaChamados"></div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
