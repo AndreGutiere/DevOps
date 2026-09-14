@@ -1,0 +1,22 @@
+  name: Preview do Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v6
+
+      - name: Gerar preview
+        id: html_preview
+        uses: pavi2410/html-preview-action@v5
+        with:
+          html_file: index.html
+          site_root: chamados-ti
+          job_summary: true
