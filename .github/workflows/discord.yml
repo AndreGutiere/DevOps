@@ -8,5 +8,5 @@ jobs:
       - name: Send Discord Message
         uses: sarge841/action-discord-webhook@v1
         with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
           content: 'A new commit by ${{ github.actor }}!'
